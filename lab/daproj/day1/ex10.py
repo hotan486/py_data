@@ -30,3 +30,24 @@ def subs(*args):
 
 
 print(subs(10,34,345,345,345,34,53,45,34,5))
+
+
+###################################
+# 가변 길이 인수
+###################################
+def subs(op,*args):
+    if op == "+":
+        total = 0
+        for arg in args:
+            total += arg
+        return total
+    elif op == "*":
+        total = 1
+        for arg in args:
+            total *= arg
+        return total
+    else:
+        print("못합니다");
+
+
+print(subs("*",10,34,345,345,345,34,53,45,34,5))
