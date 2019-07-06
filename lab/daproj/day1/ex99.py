@@ -34,8 +34,13 @@ data = pd.DataFrame(
         [np.nan, 6.5, 3.]
     ]
 )
-print(data.dropna())
-
+print(data)
+print('====================================================================')
+data1 = data.dropna()
+print(data1)
+print('====================================================================')
+data1 = data.dropna(how='all')
+print(data1)
 
 
 
