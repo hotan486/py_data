@@ -25,9 +25,13 @@ print(numbers)
 
 
 class Point:
+
     def __init__(self,x,y):
         self.x = x
         self.y = y
+
+    def __str__(self):
+        return 'Point: [x={0}, y={1}]'.format(self.x,self.y)
 
     def moveX(self, deltaX):
         self.x = self.x + deltaX
@@ -43,3 +47,7 @@ pt1 = Point(1,1)
 pt1.display()
 pt1.moveY(1)
 pt1.display()
+
+pt1 =  Point(1,1)
+print(type(pt1))
+print(pt1)
